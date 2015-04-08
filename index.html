@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to Git: Version Control System and Distributed Projects</title>
+
+		<meta name="description" content="A presentation created for the PernixData SE team to introduce git and how it will be used internally.">
+		<meta name="author" content="Brandon Willmott">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<div class="slides">
+				<!-- Slide 1 -->
+				<section data-background="images/X.png">
+					<img src="images/PernixData-large.png" style="width:500px;border:none;background:transparent;box-shadow:none"></a>
+					<h1>Intro to Git</h1>
+					<h4>Distributed Source Code Management and the Rise of Social Coding</h4>
+					<p>
+						<small><a href="http://bdwill.wordpress.com">Brandon Willmott</a> | Systems Engineer | VMware vExpert</small><br>
+						<a href="http://twitter.com/bdwill"><img src="images/twitter_150.png" style="width:5%;border:none;background:transparent;border-radius: 50%;"></a>
+						<a href="http://github.com/bdwill"><img src="images/github_150.png" style="width:5%;border:none;background:transparent;border-radius: 50%;"></a>
+						<a href="http://www.facebook.com/pages/brandon.willmott"><img src="images/facebook_150.png" style="width:5%;border:none;background:transparent;border-radius: 50%;"></a>
+					</p>
+				</section>
+
+				<!-- Slide 2 -->
+				<section data-background="images/X.png">
+						<section>
+						<h2>What is git?</h2>
+						<p>Version control system used to manage revisions of files and store changes in snapshots.</p>
+						<img src="images/git-tutorial-basics-commit-snapshots.png" style="width:50%;border:none;background:transparent;box-shadow:none">
+						</section>
+
+						<section>
+						<h2>What makes git distributed?</h2>
+						<p>Everyone has a local, full copy of the repo including history</p>
+						<img src="images/git_log_history.png" style="width:50%;border:none;background:transparent">	
+						</section>
+						
+						<section>
+						<h2>What is git used for?</h2>
+						<p>Mostly source code but anything can be put in a git repository: documents, spreadsheets, etc.</p>
+						<p>I used git while creating this presentation.</p>
+						</section>
+						
+						<section>
+							<img src="images/git_all_the_things.png" style="width:50%;border:none;background:transparent">
+						</section>
+				</section>
+
+				<!-- Slide 3 -->
+				<section data-background="images/X.png">
+						<section>
+						<h2>Why has popularity of git exploded?</h2>
+						<li>Distributed nature of git coincides with distributed nature of internet and teams.</li>
+						<li>Decline in quality of SourceForge and birth of GitHub made finding and contributing to OSS fun.</li>
+						</section>
+				</section>
+
+				<!-- Slide 4 -->
+				<section data-background="images/X.png">
+					<h2>Basic git functions</h2>
+					<pre class="fragment"><code data-trim>$ git init
+Initialized empty Git repository in /Users/bwillmott/Documents/testapp/.git/</code></pre>
+					<pre class="fragment"><code data-trim>$ git add .</code></pre>
+					<pre class="fragment"><code data-trim>$ git commit -m "Add slides 3 and 4"</code></pre>
+					<pre class="fragment"><code data-trim>$ git remote add origin https://segit01.lab.pernixdata.com/bwillmott/project.git</code></pre>
+					<pre class="fragment"><code data-trim>$ git push origin master</code></pre>
+					<pre class="fragment"><code data-trim>$ git fetch</code></pre>
+					<pre class="fragment"><code data-trim>$ git checkout -b test
+Switched to a new branch 'test'</code></pre>
+				</section>
+
+				<!-- Slide 5 -->
+				<section data-background="images/X.png">
+					<section>
+						<h2>Collaboration</h2>
+					</section>
+
+					<section>
+						<p>Clone/Fork</p>
+					</section>
+					
+					<section>
+						<p>Pull Request</p>
+						<img src="images/github_pr.png" style="width:100%;border:none;background:transparent">
+					</section>
+
+					<section>
+						<p>Issues</p>
+						<img src="images/github_issue.png" style="width:100%;border:none;background:transparent">
+					</section>
+				</section>
+
+				<!-- Slide 6 -->
+				<section data-background="images/X.png">
+					<h2>Why should we embrace git?</h2>
+					<p>Central repository for scripts/tools used by SE team</p>
+					<p>Landscape is changing with popularity of configuration management and containers</p>
+					<img src="images/slj_devops.png" style="width:35%;border:none;background:transparent" class="fragment"> 
+				</section>
+
+				<!-- Slide 7 -->
+				<section data-background="images/X.png">
+					<section>
+						<h2>Getting Started with Git</h2>
+						<p>Install SourceTree (Windows and Mac)</p>
+						<a href="https://www.sourcetreeapp.com"><img src="images/logoSourceTree.png" style="width:35%;border:none;background:transparent;box-shadow:none"></a>
+						<p>Nice, free GUI for managing repositories with GitHub/GitLab</p>
+						<p>Also installs git CLI</p>
+					</section>
+
+					<section>
+						<img src="images/sourcetree_image.png" style="width:100%;border:none;background:transparent;box-shadow:none">
+					</section>
+				</section>
+
+				<!-- Slide 9 -->
+				<section data-background="images/X.png">
+					<h2>What's the Difference between GitHub and GitLab?</h2>
+					<p>Functionally the same, same git on the back end. Front end allows ease of collaboration and sharing code.</p>
+					<p>GitHub is free for public repos</p>
+					<p>GitLab can be installed locally to have a free, private git repository with all the fixings.</p>
+				</section>
+
+				<!-- Slide 10 -->
+				<section data-background="images/X.png">
+					<h3>Git More</h3>
+					<a href="https://www.youtube.com/watch?v=U8GBXvdmHT4">The Basics of Git and GitHub</a>
+					<br>
+					<a href="http://gitimmersion.com/">Git Immersion</a>
+				</section>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
